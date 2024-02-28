@@ -1,0 +1,17 @@
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\bin\Debug\net7.0\patternsDesignThroughWebScraper.exe
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\bin\Debug\net7.0\patternsDesignThroughWebScraper.deps.json
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\bin\Debug\net7.0\patternsDesignThroughWebScraper.runtimeconfig.json
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\bin\Debug\net7.0\patternsDesignThroughWebScraper.dll
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\bin\Debug\net7.0\patternsDesignThroughWebScraper.pdb
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\bin\Debug\net7.0\HtmlAgilityPack.dll
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\patternsDesignThroughWebScraper.csproj.AssemblyReference.cache
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\patternsDesignThroughWebScraper.GeneratedMSBuildEditorConfig.editorconfig
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\patternsDesignThroughWebScraper.AssemblyInfoInputs.cache
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\patternsDesignThroughWebScraper.AssemblyInfo.cs
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\patternsDesignThroughWebScraper.csproj.CoreCompileInputs.cache
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\patternsDesignThroughWebScraper.csproj.CopyComplete
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\patternsDesignThroughWebScraper.dll
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\refint\patternsDesignThroughWebScraper.dll
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\patternsDesignThroughWebScraper.pdb
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\patternsDesignThroughWebScraper.genruntimeconfig.cache
+D:\vitek\C#\patternsDesignThroughWebScraper\patternsDesignThroughWebScraper\obj\Debug\net7.0\ref\patternsDesignThroughWebScraper.dll

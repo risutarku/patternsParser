@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PBZQD4WWC7Bqn5RUShhAPvWcKxmtyZsVyRUkRJcmjX7uKzcnAswH/Qvgb3l2sAqFP5wW+jUf+1A2Uy2i0WBBYg==",
+  "success": true,
+  "projectFilePath": "D:\\vitek\\C#\\patternsDesignThroughWebScraper\\patternsDesignThroughWebScraper\\patternsDesignThroughWebScraper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vitye\\.nuget\\packages\\htmlagilitypack\\1.11.59\\htmlagilitypack.1.11.59.nupkg.sha512"
+  ],
+  "logs": []
+}
