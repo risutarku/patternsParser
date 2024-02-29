@@ -10,7 +10,7 @@ namespace patternsDesignThroughWebScraper
 {
     internal class WebScraper
     {
-        public static List<News> scrap(string url)
+        public static List<News> Scrap(string url)
         {
             List<News> newsList = new List<News>();
             var httpClient = new HttpClient();

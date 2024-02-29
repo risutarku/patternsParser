@@ -2,62 +2,75 @@
 
 namespace patternsDesignThroughWebScraper
 {
+    
     internal class Program
     {
-        public static void PrintNewsByRubric(List<News> newsList, string rubric)
+        //public static List<News> GetNews(List<string> urls)
+        //{
+        //    List<News> allNews = new List<News>();
+        //    foreach (string url in urls)
+        //    {
+        //        allNews = allNews.Union(WebScraper.Scrap(url)).ToList();
+        //    }
+        //    return allNews;
+        //}
+        public static List<News> GetNews(string url)
         {
-            News scienceNews = newsList.Find(news => news.Rubric == rubric);
+            List<News> news =  WebScraper.Scrap(url).ToList();
+            return news;
+            
+        }
 
-            if (scienceNews != null)
+        public static void PrintNews(List<News> newsList)
+        {
+            foreach(var el in newsList)
             {
-                foreach (News n in newsList)
-                {
-                    if(n.Rubric == rubric)
-                    {
-                        Console.WriteLine($"Новость по теме '{rubric}'");
-                        Console.WriteLine(n.Title);
-                        Console.WriteLine(n.Date);
-                        Console.WriteLine("_-_-_-_-_-_-_-_-");
-                    }
-                }
+                Console.WriteLine(el.Title);
+                Console.WriteLine(el.Date);
+            }
+        }
+
+        public static List<News> GenerateNews(Dictionary<string, string> rubricsAndUrls, string rubric)
+        {
+            if (rubricsAndUrls[rubric] != null)
+            {
+                List<News> news = GetNews(rubricsAndUrls[rubric]);
+                return news;
             }
             else
             {
-                Console.WriteLine($"Новостей по теме '{rubric}' не найдено.");
+                Console.WriteLine("Такой темы нет");
+                List<News> news = new List<News>();
+                return news;
             }
         }
         static void Main(string[] args)
         {
-            List<string> urls = new List<string>()
+
+            Dictionary<string, string> rubricsAndUrls = new Dictionary<string, string>()
             {
-                "https://ngs.ru/text/?rubric=auto",
-                "https://ngs.ru/text/?rubric=business",
-                "https://ngs.ru/text/?rubric=spring",
-                "https://ngs.ru/text/?rubric=gorod",
-                "https://ngs.ru/text/?rubric=transport",
-                "https://ngs.ru/text/?rubric=food",
-                "https://ngs.ru/text/?rubric=animals",
-                "https://ngs.ru/text/?rubric=sport"
+                {"Авто", "https://ngs.ru/text/?rubric=auto"},
+                {"Бизнесс", "https://ngs.ru/text/?rubric=business"},
+                {"Весна", "https://ngs.ru/text/?rubric=spring"},
+                {"Город", "https://ngs.ru/text/?rubric=gorod"},
+                {"Дороги и Транспорт", "https://ngs.ru/text/?rubric=transport"},
+                {"Еда", "https://ngs.ru/text/?rubric=food"},
+                {"Животные ", "https://ngs.ru/text/?rubric=animals"},
+                {"Спорт",  "https://ngs.ru/text/?rubric=sport"}
             };
-            List<News> allNews = new List<News>();
-            foreach(string url in urls)
-            {
-                allNews = allNews.Union(WebScraper.scrap(url)).ToList();
-            }
-            //foreach(News n in allNews)
-            //{
-            //    Console.WriteLine(n.Rubric);
-            //    Console.WriteLine(n.Title);
-            //    Console.WriteLine(n.Date);
-            //    Console.WriteLine("_-_-_-_-_-_-_-_-");
-            //}
 
-            PrintNewsByRubric(allNews, "Город");
-            PrintNewsByRubric(allNews, "Наука");
-            PrintNewsByRubric(allNews, "Спорт");
-            PrintNewsByRubric(allNews, "Город");
-            PrintNewsByRubric(allNews, "Город");
+            List<News> news = GenerateNews(rubricsAndUrls, "Весна");
+            PrintNews(news);
+            Console.WriteLine("-----------------------------------------");
 
+            NewsPresenter a = new NewsPresenter(news, new LengthSort());
+            List<News> lengthSortedNews = a.Sort(news);
+            PrintNews(lengthSortedNews);
+            Console.WriteLine("-----------------------------------------");
+            a.Sortable = new AlphabetSort();
+            lengthSortedNews= a.Sort(news);
+            PrintNews(lengthSortedNews);
         }
     }
+    
 }
